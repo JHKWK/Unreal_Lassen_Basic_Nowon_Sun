@@ -1,0 +1,3 @@
+﻿  cpp_tmeplate_class_specialize.cpp
+C:\Users\User\Documents\GitHub\Unreal_Lassen_Basic_Nowon_Sun\CPP\c_first\cpp_tmeplate_class_specialize\cpp_tmeplate_class_specialize.cpp(38,1): warning C4267: '초기화 중': 'size_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  cpp_tmeplate_class_specialize.vcxproj -> C:\Users\User\Documents\GitHub\Unreal_Lassen_Basic_Nowon_Sun\CPP\c_first\x64\Debug\cpp_tmeplate_class_specialize.exe
