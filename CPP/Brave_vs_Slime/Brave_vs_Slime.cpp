@@ -14,7 +14,9 @@ int main()
     int tWorld[5] = { 100, 0, 1, 0, 200 };
 
     CBrave tBrave;
+    tBrave.BuildInfo();
     CSlime tSlime;
+    tSlime.BuildInfo();
 
     char tMoveDir = 'd';
 
@@ -40,7 +42,7 @@ int main()
         {
             if (tBrave.GetX() > 0)
             {
-                tBrave.DoBraveMove(&tBrave, -1);
+                tBrave.DoMove(-1);
                 cout << "<--move left" << endl;
             }
             else
@@ -53,7 +55,7 @@ int main()
         {
             if (tBrave.GetX() < 4)
             {
-                tBrave.DoBraveMove(&tBrave, 1);
+                tBrave.DoMove(1);
                 cout << "-->move right" << endl;
             }
             else
@@ -96,7 +98,7 @@ int main()
                     case 2:
                     case 3:
                     {
-                        tBrave.DoDamage(tSlime.GetAP());
+                        tBrave.DoDamage(&tSlime);
 
                         cout << "Brave is damaged" << endl;
                     }
@@ -105,7 +107,7 @@ int main()
                     case 5:
                     case 6:
                     {
-                        tSlime.DoDamge(tBrave.GetAP());
+                        tSlime.DoDamage(&tBrave);
 
                         cout << "Slime is damaged." << endl;
                     }

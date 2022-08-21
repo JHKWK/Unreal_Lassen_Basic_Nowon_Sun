@@ -1,10 +1,7 @@
 #include "CBrave.h"
-void CBrave::DoBraveMove(CBrave* tBrave, int tDir)
+void CBrave:: BuildInfo()
 {
-    (*tBrave).mX = (*tBrave).mX + tDir;
-}
-
-void CBrave::DoDamage(float tSlimeAP)
-{
-    this->mHP - tSlimeAP;
+    mX = 0;
+    mHP = 1000;
+    mAP = 100;
 }
