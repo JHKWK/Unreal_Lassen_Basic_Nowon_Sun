@@ -26,4 +26,23 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+
+public:
+
+	// UPROPERTY 매크로는 멤버변수에 적용
+	// 클래스 디폴트, 인스턴스 디테일 어디에서 보일지 여부
+	// 블루프린트에서 관찰 가능 여부
+
+	// 멤버변수의 해당 UPROPERTY 매크로는
+	// 일반   (값타입) 변수는     EditAnywhere
+	// 포인터 (참조형) 변수에게는 VisibleAnyWhere
+	// 를 적용해 주는 것이 편리하다
+
+	UPROPERTY(EditAnywhere)
+	int mTest = 777;
+
+	// UPROPERTY(EditAnywhere) -> 클래스가 나와버린다
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* mpBody = nullptr;
+
 };
